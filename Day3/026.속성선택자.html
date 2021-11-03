@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성 선택자</title>
+  <style>
+    a[href="http://www.paullab.co.kr"] {
+            font-size: 48px;
+    }
+    /* 
+    ~= 는 단어를 기준으로 *= 는 문자열을 기준으로 판단을 하게 됩니다. 예를 들어서 위와 같은 상황에서 paullabs 를 어떻게 인식할까요?
+    ~= 은 단어를 기준으로 paullab 와 paullabs 를 다르다고 인식하고 선택을 못하게 되고 *= 은 문자열을 기준으로 paullabs  안에 paullab 가 포함되기 때문에 선택을 합니다.
+    */
+    /* 문자열로봄 */
+    a[href~="paullab"] {
+        font-weight: bold;
+    }
+    /* 단어로 봄 */
+    a[href*="paullab"] {
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a href="#">클릭</a>
+  <a href="http://www.paullab.co.kr">바울랩</a>
+  <a>클릭</a>
+</body>
+</html>
