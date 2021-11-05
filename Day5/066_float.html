@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+  <style>
+    /* float을 해제하는 여러가지 방법들 */
+    /* clear fix */
+    .clear-fix::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .clear-fix {
+      clear: both;
+    }
+
+    /* 
+      자식들의 존재(float)를 부모가 알고 있을 때
+      -overflow
+      -inline-block
+      */
+    /* ul {
+      overflow: hidden;
+    } */
+
+    /* ul::after는 마지막 자식 요소 */
+    /* ul::after {
+      display: block;
+      content: '';
+      clear: both;
+    } */
+
+    li {
+      float: left;
+      width: 300px;
+      height: 100px;
+      background-color: pink;
+    }
+    
+    /*
+      float 해결 방법
+      - over-flow:hidden (부모요소 입장)
+      - 맨 마지막 요소에 clear 속성 적용 (형제 요소 입장)
+      - 넓이를 주지 않으면 인라인 요소처럼 변함
+      */
+    /* li:nth-child(2) {
+      float: left; 
+      width: 100%;
+      background-color: black;
+    }
+
+    li:nth-child(3) {
+      clear: left;
+    } */
+  </style>
+</head>
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

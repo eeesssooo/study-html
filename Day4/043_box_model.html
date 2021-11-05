@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box model</title>
+  <style>
+    /* 
+    [border가 width에 포함된다? 안된다?]
+    - 보더는 width에 포함되지 않는다.
+    - 패딩은 백그라운드컬러의 영역을 받는다
+    - 보더만 그 외의 크기로 취급되고 패딩은 설정된 width내에서 계산
+    - box-sizing: border-box; 를 통해 영향받지 않도록 한다.
+     */
+    .one {
+      border: 50px solid black;
+      padding: 50px;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+
+    .two {
+      box-sizing: border-box; 
+      border: 20px solid black;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radius</title>
+  <style>
+    body {
+      position: relative;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: #ecd376;
+    }
+
+    .left {
+      position: absolute;
+      left: 0px;
+      transform: rotate(-15deg);
+      border: 10px solid black;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 120px;
+    }
+
+    .right {
+      position: absolute;
+      left: 360px;
+      transform: rotate(15deg);
+      display: inline-block;
+      border: 10px solid black;
+      border-top-left-radius: 120px;
+      border-top-right-radius: 100px;
+    }
+
+    .face {
+    position: absolute;
+    top: 140px;
+    width: 560px;
+    height: 360px;
+    border: 10px solid black;
+    border-radius: 250%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="face"></div>
+</body>
+</html>

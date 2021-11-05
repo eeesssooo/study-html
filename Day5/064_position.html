@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    .second {
+      /* 변화 없음 */
+      /* position: relative; */
+
+      /* 
+        absolute속성을 가진 요소(second)가 normal-flow에서 벗어나게 되므로,
+        nomarl flow인 맨 마지막의 요소가 기존 second의 위치에 가게된다.
+        즉, 마지막 요소가 보이지 않는 것 처럼 된다.
+      */
+      position: absolute;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div>안녕하세요</div>
+  <div class="second">안녕하세요</div>
+  <div>안녕하세요</div>
+</body>
+</html>

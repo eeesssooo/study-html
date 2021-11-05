@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float-test</title>
+  <style>
+    /* 수평정렬  */
+    /* 
+    1. 부모 요소에 overflow:hidden
+    2. 맨 마지막 요소에 clear both
+    */
+    body {
+      margin: 20px;
+    }
+
+    header {
+      height: 100px;
+      background-color: cornflowerblue;
+    }
+
+    div {
+      overflow: hidden;
+    }
+
+    section {
+      width: 33.3333%;
+      height: 400px;
+    }
+    /* 단, section요소의 숫자와 nth 의 개수가 같아야한다 */
+    section:nth-child(1) {
+      float: left;
+      background-color: olivedrab;
+    }
+
+    section:nth-child(2) {
+      float: left;
+      background-color: orangered;
+    }
+
+    section:nth-child(3) {
+      float: left;
+      background-color: plum;
+    }
+
+    footer {
+      clear: both;
+      height: 100px;
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <div>
+    <section></section>
+    <section></section>
+    <section></section>
+  </div>
+  <footer></footer>
+</body>
+</html>
