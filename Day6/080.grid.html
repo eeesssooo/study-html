@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+      display: grid;
+      height: 100vh;
+      /* 열의 개수 설정 */
+      /* grid-template-columns: 100px 100px 100px; */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+
+     /* `grid-template-columns` : 열의 넓이를 설정합니다. */
+    /* `grid-template-rows` : 행의 높이를 설정합니다. */
+    /* **`repeat`**( 적용할 트랙의 갯수, 반복할 수치 ) 함수를 이용하면 그리드 트랙 별 수치 반복을 설정 할 수 있습니다. */
+
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: 100px 100px 100px;
+
+    /* margin과 유사; */
+    /* 단 fr 단위가 아닌 고정단위일때는 gap의 영역을 포함해서 작동하여 스크롤이 생김 */
+      gap: 10px;
+    }
+
+    [class^="item"] {
+      background-color: pink;
+      border: 1px solid black;
+    }
+
+    .item1 {
+      /* grid-column-start: 1;
+      grid-column-end: 3; */
+      /* 축약형 */
+      /* span : 칸의 갯수 */
+      /* span 없다면 기존 그리드 라인과 동일함 */
+      /* grid-column: 1 / 3; */
+
+      /* row */
+      /* grid-row-start: 1;
+      grid-row-end: 3; */
+      grid-row: 1/3;
+      grid-row: 1/ span 3;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    display:grid 로 그리드 컨테이너와 아이템을 설정합니다. = display :flex
+
+    그리드 컨테이너 : 그리드의 가장 바깥영역 = container
+
+    그리드 아이템 : 그리드 컨테이너의 자식 요소들 = items
+
+    그리드 트랙 : 그리드의 행(row) 또는 열(column) mian, cross axis
+
+    그리드 셀 : 그리드의 한 칸 (개념적인 정의)
+
+    그리드 라인 : 그리드 셀을 구분하는 선
+
+    그리드 넘버 : 그리드 라인의 각 번호
+
+    그리드 갭 : 그리드 셀 사이의 간격
+
+    그리드 에어리어 : 그리드 셀의 집합
+  -->
+
+  <!-- 그리드의 특징 -->
+  <!-- 
+    컨테이너를 꽉 채우려고 한다.
+  -->
+
+
+
+  <div class="container">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slide letter</title>
+  <style>
+     /* reset */
+    body, h1, h2, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateY(0);
+      }
+
+      25% {
+        transform: translateY(-20%);
+      }
+
+      50% {
+        transform: translateY(-40%);
+      }
+
+      75% {
+        transform: translateY(-60%);
+      }
+
+      100% {
+        transform: translateY(-80%);
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* style */
+    body {
+      background-color: cornflowerblue;
+      /* 폰트 */
+    }
+
+    div {
+      /* width: 500px;
+      height: 500px;
+      margin: 0 auto; */
+    }
+
+    .introduce {
+      margin: 100px;
+      text-align: center;
+      font-size: 50px;
+      color: #ffffff;
+    }
+
+    .icons {
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+      line-height: 100px;
+      color: #ffffff;
+    }
+
+    .icons::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* blur 처리 */
+      box-shadow: inset 0 0 10px 10px cornflowerblue;
+    }
+
+    .icon-list {
+      animation: slide 4s infinite;
+      font-size: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="introduce">
+    <h1>🖐🏻 Hello, I'm Soojeong 🖐🏻</h1>
+    <div class="icons">
+      <ul class="icon-list">
+        <li>🦋</li>
+        <li>💙</li>
+        <li>🐬</li>
+        <li>💎</li>
+        <li>🦋</li>
+      </ul>
+    </div>
+    <h2>Blue lover</h2>
+  </div>
+</body>
+</html>
