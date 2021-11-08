@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* util*/
+/* setting */
+/* animaion */
+/* reset */
+/* util */
+/* layout */
+/* design */
+/* media query */
+
+/* util */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 한줄 말줄임 */
+.sl-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 멀티 말줄임 */
+.multi-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+/* style */
+.content-cinema {
+  width: 1006px;
+  margin: 86px auto 0;
+  padding: 0 27px 29px;
+  border: 2px solid #bdbdbd;
+  border-radius:  15px;
+  background-color: #e5e5e5;
+}
+
+.content-cinema .content-title {
+  font-size: 25px;
+  text-align: center;
+  line-height: 28px;
+  padding: 38px 0;
+}
+
+.content-cinema .nav-cinema {
+  text-align: center;
+}
+
+.content-cinema .nav-cinema::before {
+  display: block;
+  content: "";
+  width: 650px;
+  height: 2px;
+  background-color: #bdbdbd;
+  margin: 0 auto;
+}
+
+.nav-cinema .list-cinema-nav {
+  /* display: flex; */
+  display: inline-block;
+  margin: 27px 0;
+}
+
+.nav-cinema .list-cinema-nav li {
+  float: left;
+}
+
+.nav-cinema .list-cinema-nav li + li {
+  margin-left: 60px;
+}
+
+.nav-cinema .list-cinema-nav .link-nav {
+  color: #828282;
+}
+
+.nav-cinema .list-cinema-nav .on .link-nav {
+  color: #000;
+  font-weight: bold;
+}
