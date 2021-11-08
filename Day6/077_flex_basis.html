@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <title>flex-basis</title>
+  <style>
+    .container{
+      display: flex;
+    }
+
+    /* 
+    **자식요소에 사용합니다!**  
+    flex item 들의 크기를 특정한다. 
+    width, height 와 다른점은 axis 방향에 따라 달라진다는 것 그리고 내부의 컨텐츠에 따른 유연한 크기입니다. 
+    기본값은 auto. auto 일때는 width, height 값을 사용합니다.
+    만약 flex-basis 값이 적용되어 있다면 width, height 값은 무시된다.
+    */
+
+    .item {
+      flex-basis: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Lorem ipsum dolor sit amet.</div>
+    <div class="item">Lorem ipsum dolor sit amet.</div>
+    <div class="item">Lorem ipsum dolor sit amet.</div>
+  </div>
+</body>
+</html>

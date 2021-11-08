@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self, order</title>
+  <link rel="stylesheet" href="reset.css">
+  <!--  align-self
+  부모 컨테이너의 개별 아이템의 속성을 변경할 때 사용한다.
+  align-self: flex-start;
+  -->
+
+  <!-- order
+    마크업은 그대로이지만, 렌더링되는 순서가 달라짐
+    다른 태그에 오더 값이 부여되지 않으면, 오더링 될때까지 기다림
+    오더가 없으면 자기 자신의 순서를 지키고 있고, 오더링이 된 요소들만 순서를 갖게됨
+    위치를 지정하는 것이 아닌 우선순위이다.
+  -->
+  <style>
+    ul {
+      display: flex;
+      height: 100vh;
+      /* align-items: flex-end; */
+    }
+
+    li {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border: 1px solid black
+    }
+
+    /* .fifth { */
+      /* align-self: flex-start; */
+    /* } */
+
+    .first {
+      order: 2;
+    }
+
+    .second {
+      /* order: 2; */
+    }
+
+    .third {
+      /* order: 3; */
+    }
+
+    .forth {
+      /* order: 4; */
+    }
+
+    .fifth {
+      /* order: 5; */
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="first">1</li>
+    <li class="second">2</li>
+    <li class="third">3</li>
+    <li class="forth">4</li>
+    <li class="fifth">5</li>
+  </ul>
+</body>
+</html>
