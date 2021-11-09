@@ -9,16 +9,21 @@
   <link rel="stylesheet" href="src/style/style.css">
 </head>
 <body>
+  <!-- 접근 성을 위함 : nav-skip -->
+  <div class="nav-skip">
+    <a href="#content-nav">shortcut cinema info</a>
+    <a href="#content-company">shortcut company info</a>
+  </div>
   <h1 class="sr-only">Jungle cinema</h1>
   <section class="content-cinema">
     <h2 class="content-title">Jungle cinema list</h2>
     <header>
       <h3 class="sr-only">cinema info list</h3>
-      <nav class="nav-cinema">
+      <nav id="content-nav" class="nav-cinema">
         <ul class="list-cinema-nav">
-          <li class="on"><a href="#" class="link-nav">now playing</a></li>
+          <li class="on"><a href="#" class="link-nav">Now playing</a></li>
           <li><a href="#" class="link-nav">Coming soon</a></li>
-          <li><a href="#" class="link-nav">box office</a></li>
+          <li><a href="#" class="link-nav">Box office</a></li>
         </ul>
       </nav>
     </header>
@@ -32,13 +37,13 @@
               <img src="src/images/movie_weniv.png" alt="위니브 월드 : 새로운 시대 상세 페이지">
             </a>
             <strong class="title-cinema sl-ellipsis">위니브 월드 : 새로운 시대</strong>
-              <dl>
+              <dl class="list-info">
                 <!-- dl안에 유일하게 적용 가능한 tag : div -->
                 <div>
-                  <dt>Summary</dt>
+                  <dt>Genre</dt>
                   <dd>Fantasy</dd>
                 </div>
-                <div>
+                <div class="item-star">
                   <dt>Rating</dt>
                   <dd>9.58</dd>
                 </div>
@@ -48,42 +53,243 @@
                 </div>
                 <div>
                   <dt>Cast</dt>
-                  <dd class="sl-ellipsis">라이캣, 소울곰, 개리씨, 자바독, 파이, 썬, 빙키, 뮤라</dd>
+                  <dd class="multi-ellipsis">라이캣, 소울곰, 개리씨, 자바독, 파이, 썬, 빙키, 뮤라 </dd>
                 </div>
               </dl>
-              <div>
-                <a href="#none">reservation</a>
-                <a href="#none">trailer</a>
-              </div>
-            </article>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
         </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_java.png" alt="눈떠보니 코딩테스트 전날 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">눈떠보니 코딩테스트 전날</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Thriller</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>8.25</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.01</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">자바독, 개리씨, 빙키</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_pygame.png" alt="파이게임 어드벤처 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">파이게임 어드벤처</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd class="long-title">Fantasy action</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>8.56</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.05</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">개리씨, 파이썬</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_nginx.png" alt="NGINX의 춤 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">NGINX의 춤</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Drama</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>9.88</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.05</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">NGINX, 노션</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_meetup.png" alt="어쩌다 밋업 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">어쩌다 밋업</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Drama</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>9.25</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04178</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">라이캣, 자바독, 소울곰</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_mbti.png" alt="MBIT는 내 운명 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">MBIT는 내 운명</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Romance</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>9.02</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.12</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">라이캣, 개리씨, 자바독</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_pyqt.png" alt="파이큐티의 사랑 상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">파이큐티의 사랑</strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Rommance</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>8.81</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.08</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">파이썬, 큐티</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        <li>
+          <article>
+            <h4 class="sr-only">cinema detail info</h4>
+            <a href="#none" class="link-move">
+              <img src="src/images/movie_bootcamp.png" alt="파이썬 부트캠프  상세 페이지">
+            </a>
+            <strong class="title-cinema sl-ellipsis">파이썬 부트캠프 </strong>
+              <dl class="list-info">
+                <!-- dl안에 유일하게 적용 가능한 tag : div -->
+                <div>
+                  <dt>Genre</dt>
+                  <dd>Drama</dd>
+                </div>
+                <div class="item-star">
+                  <dt>Rating</dt>
+                  <dd>8.77</dd>
+                </div>
+                <div>
+                  <dt>Release</dt>
+                  <dd>2021.04.12</dd>
+                </div>
+                <div>
+                  <dt>Cast</dt>
+                  <dd class="multi-ellipsis">캣, 파이, 썬, 뮤라</dd>
+                </div>
+              </dl>
+          </article>
+          <a href="#none" class="link-reserve">reservation</a><a href="#none" class="link-teaser">teaser</a>
+        </li>
+        
       </ul>
     </section>
   </section>
-  <footer>
-    <section>
+  <footer id="content-company" class="content-company">
+    <section class="content-companyInfo">
       <h2 class="sr-only">corp info</h2>
-      <strong>Jungle cinema</strong>
-      <dl>
-        
+      <strong class="title-company">Jungle cinema</strong>
+      <dl class="list-companyInfo">
+        <dt class="sr-only">회사명</dt>
+        <dd>(주)Jungle cinema</dd>
+        <dt>대표</dt>
+        <dd>라이언</dd>
+        <dt>사업자 번호</dt>
+        <dd>000-0000-0000</dd>
+        <dt class="sr-only">업종</dt>
+        <dd>광고 영화 및 비디오물 제작업</dd>
+        <dt>주소</dt>
+        <dd>경기도</dd>
       </dl>
-      <dt>회사명</dt>
-      <dd>(주)Jungle cinema</dd>
-      <dt>대표</dt>
-      <dd>라이언</dd>
-      <dt>사업자 번호</dt>
-      <dd>000-0000-0000</dd>
-      <dt>업종</dt>
-      <dd>광고 영화 및 비디오물 제작업</dd>
-      <dt>주소</dt>
-      <dd>경기도</dd>
-      <em>링크목록</em>
-      <ul>
-        <li><a href="#none">twitter</a></li>
-        <li><a href="#none">instagram</a></li>
-        <li><a href="#none">facebook</a></li>
+      
+      <em class="sr-only">링크목록</em>
+      <ul class="list-sns">
+        <li><a href="#none" class="link-twitter">twitter</a></li>
+        <li><a href="#none" class="link-insta">instagram</a></li>
+        <li><a href="#none" class="link-facebook">facebook</a></li>
       </ul>
-      <small>Copyright &copy; 2021 the Jungle. All right reserved.</small>
+      <small class="text-copy">Copyright &copy; 2021 the Jungle. All right reserved.</small>
     </section>
   </footer>
 </body>
