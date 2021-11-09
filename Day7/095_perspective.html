@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+        .origin {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 100px auto;
+            /* perspective: 400px; */
+            perspective: 100px;
+        }
+
+        .rotate-pannel {
+            width: 200px;
+            height: 200px;
+            background: red;
+            /* 실습 1 */
+            /* transform: rotate(45deg); */
+
+            /* 실습 2 perspective를 준것과 주지 않은것을 비교해보세요. */
+            transform: rotateX(45deg);
+
+            /* 실습 3 perspective를 준것과 주지 않은것을 비교해보세요.*/
+            /* transform: rotateY(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="rotate-pannel"></div>
+    </div>
+</body>
+</html>
