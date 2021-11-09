@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flip card</title>
+  <style>
+
+.scene {
+  display: flex;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 360px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card:hover {
+  transform: translateX(-108%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background-image: url(./flip-card/78876.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.card__face--back {
+  border: 1px solid #ccc;
+  transform: rotateY(180deg);
+}
+
+.moon {
+  background-image: url(https://upload.wikimedia.org/wikipedia/ko/7/7f/RWS_Tarot_18_Moon.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.sun {
+  background-image: url(https://upload.wikimedia.org/wikipedia/ko/1/17/RWS_Tarot_19_Sun.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.justice {
+  background-image: url(https://upload.wikimedia.org/wikipedia/ko/e/e0/RWS_Tarot_11_Justice.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.fool {
+  background-image: url(https://upload.wikimedia.org/wikipedia/ko/9/90/RWS_Tarot_00_Fool.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+</style>
+</head>
+<body>
+  <h1>Tarot Card</h1>
+  <div class="scene">
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back moon"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back  sun"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back  justice"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back fool"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
