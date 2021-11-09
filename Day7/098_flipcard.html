@@ -4,72 +4,156 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flip card</title>
+  <title>tarot card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   <style>
+    html, body {
+      background-color: rgb(43, 1, 82);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.scene {
-  display: flex;
-  perspective: 600px;
-}
+    h1 {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 80px;
+      font-weight: bold;
+      text-align: center;
+      color:#cec261;
+    }
 
-.card {
-  position: relative;
-  width: 300px;
-  height: 360px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
-}
+    .scene {
+      margin: 0 auto;
+      width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(5, 200px);
+      perspective: 600px;
+    }
 
-.card:hover {
-  transform: translateX(-108%) rotateY(-180deg);
-}
+    .card {
+      position: relative;
+      width: 200px;
+      height: 260px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform-origin: center right;
+      transition: transform 1s;
+    }
 
-.card__face {
-  position: absolute;
-  width: 240px;
-  height: 340px;
-  backface-visibility: hidden;
-}
+    .card:hover {
+      transform: translateX(-100%) rotateY(-180deg);
+    }
 
-.card__face--front {
-  background-image: url(./flip-card/78876.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  overflow: hidden;
-}
+    .card__face {
+      position: absolute;
+      width: 200px;
+      height: 260px;
+      backface-visibility: hidden;
+    }
 
-.card__face--back {
-  border: 1px solid #ccc;
-  transform: rotateY(180deg);
-}
+    .card__face--front {
+      background-image: url(./flip-card/78876.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
 
-.moon {
-  background-image: url(https://upload.wikimedia.org/wikipedia/ko/7/7f/RWS_Tarot_18_Moon.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+    .card__face--back {
+      border: 1px solid #ccc;
+      transform: rotateY(180deg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
 
-.sun {
-  background-image: url(https://upload.wikimedia.org/wikipedia/ko/1/17/RWS_Tarot_19_Sun.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+    .fool {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/9/90/RWS_Tarot_00_Fool.jpg);
+    }
 
-}
+    .magician {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/de/RWS_Tarot_01_Magician.jpg);
+    }
 
-.justice {
-  background-image: url(https://upload.wikimedia.org/wikipedia/ko/e/e0/RWS_Tarot_11_Justice.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+    .high-priestess {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/8/88/RWS_Tarot_02_High_Priestess.jpg);
+    }
 
-.fool {
-  background-image: url(https://upload.wikimedia.org/wikipedia/ko/9/90/RWS_Tarot_00_Fool.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+    .empress {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/d2/RWS_Tarot_03_Empress.jpg);
+    }
 
+    .emperor {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/c/c3/RWS_Tarot_04_Emperor.jpg);
+    }
+
+    .hierophant {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/8/8d/RWS_Tarot_05_Hierophant.jpg);
+    }
+
+    .lovers {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/db/RWS_Tarot_06_Lovers.jpg);
+    }
+
+    .chariot {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/9/9b/RWS_Tarot_07_Chariot.jpg);
+    }
+
+    .strength {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/f/f5/RWS_Tarot_08_Strength.jpg);
+    }
+
+    .hermit {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/4/4d/RWS_Tarot_09_Hermit.jpg);
+    }
+
+    .wheel_of_fortue {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg);
+    }
+
+    .justice {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/e/e0/RWS_Tarot_11_Justice.jpg);
+    }
+
+    .hanged_man {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/2/2b/RWS_Tarot_12_Hanged_Man.jpg);
+    }
+
+    .death {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/d7/RWS_Tarot_13_Death.jpg);
+    }
+
+    .temperance {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/f/f8/RWS_Tarot_14_Temperance.jpg);
+    }
+
+    .devil {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/5/55/RWS_Tarot_15_Devil.jpg);
+    }
+
+    .tower {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/5/53/RWS_Tarot_16_Tower.jpg);
+    }
+
+    .star {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/db/RWS_Tarot_17_Star.jpg);
+    }
+
+    .moon {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/7/7f/RWS_Tarot_18_Moon.jpg);
+    }
+
+    .sun {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/1/17/RWS_Tarot_19_Sun.jpg);
+    }
+
+    .judgement {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/d/dd/RWS_Tarot_20_Judgement.jpg);
+    }
+
+    .world {
+      background-image: url(https://upload.wikimedia.org/wikipedia/ko/f/ff/RWS_Tarot_21_World.jpg);
+    }
 </style>
 </head>
 <body>
@@ -77,24 +161,113 @@
   <div class="scene">
     <div class="card">
       <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back fool"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back magician"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back high-priestess"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back empress"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back emperor"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back hierophant"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back lovers"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back chariot"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back strength"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back hermit"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back wheel_of_fortue"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back hanged_man"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back hanged_man"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back death"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back temperance"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back devil"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back tower"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
+      <div class="card__face card__face--back star"></div>
+    </div>
+
+    <div class="card">
+      <div class="card__face card__face--front"></div>
       <div class="card__face card__face--back moon"></div>
     </div>
 
     <div class="card">
       <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back  sun"></div>
+      <div class="card__face card__face--back sun"></div>
     </div>
 
     <div class="card">
       <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back  justice"></div>
+      <div class="card__face card__face--back judgement"></div>
     </div>
 
     <div class="card">
       <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back fool"></div>
+      <div class="card__face card__face--back world"></div>
     </div>
-
   </div>
 
 </body>
