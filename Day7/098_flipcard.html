@@ -24,32 +24,36 @@
       color:#cec261;
     }
 
-    .scene {
-      margin: 0 auto;
+    .container {
       width: 1000px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(5, 200px);
+    }
+
+    .scene {
+      width: 200px;
+      height: 260px;
       perspective: 600px;
     }
 
     .card {
       position: relative;
-      width: 200px;
-      height: 260px;
-      cursor: pointer;
+      width: 100%;
+      height: 100%;
       transform-style: preserve-3d;
-      transform-origin: center right;
       transition: transform 1s;
     }
 
     .card:hover {
-      transform: translateX(-100%) rotateY(-180deg);
+      cursor: pointer;
+      transform:rotateY(-180deg);
     }
 
     .card__face {
       position: absolute;
-      width: 200px;
-      height: 260px;
+      width: 100%;
+      height: 100%;
       backface-visibility: hidden;
     }
 
@@ -158,115 +162,138 @@
 </head>
 <body>
   <h1>Tarot Card</h1>
-  <div class="scene">
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back fool"></div>
+  <div class="container">
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back fool"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back magician"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back magician"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back high-priestess"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back high-priestess"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back empress"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back empress"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back emperor"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back emperor"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back hierophant"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back hierophant"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back lovers"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back lovers"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back chariot"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back chariot"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back strength"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back strength"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back hermit"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back hermit"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back wheel_of_fortue"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back wheel_of_fortue"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back hanged_man"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back hanged_man"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back hanged_man"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back hanged_man"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back death"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back death"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back temperance"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back temperance"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back devil"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back devil"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back tower"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back tower"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back star"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back star"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back moon"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back moon"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back sun"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back sun"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back judgement"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back judgement"></div>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="card__face card__face--front"></div>
-      <div class="card__face card__face--back world"></div>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back world"></div>
+      </div>
     </div>
   </div>
 
