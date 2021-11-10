@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=dwidth, initial-scale=1.0">
+  <title>button 101</title>
+  <style>
+    div {
+      position: relative;
+      width: 200px;
+      height: 50px;
+      margin-bottom: 50px;
+      background-color: brown;
+      border: 2px solid goldenrod;
+      border-radius: 15px;
+      transition: all 2s;
+      color: honeydew;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 50px;
+      overflow: hidden;
+    }
+    
+    /* ease-in, ease-out, ease-in-out은 사용 빈도수가 낮음 */
+    .c1:hover {
+      transform: translateX(100px);
+      transition-timing-function: ease;
+    }
+
+    .c2:hover {
+      transform: translateX(100px);
+      transition-timing-function: linear;
+    }
+
+    .c3:hover {
+      background-color: chocolate;
+    }
+
+    .c4:hover {
+      color: black
+    }
+
+    .c5:hover {
+      transform: scale(1.2)
+    }
+
+    .c6:hover {
+      width: 1000px;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .c7:hover {
+      width: 500px;
+      letter-spacing: 20px;
+    }
+
+    .c8:hover {
+      opacity: 0.3;
+    }
+
+    .c9:hover {
+      border: 20px solid orangered;
+    }
+
+    /* rotate */
+    .c10:hover {
+      transform: rotate(20deg);
+    }
+
+    .c11:hover {
+      transform: rotate(20deg);
+      transform-origin: top;
+    }
+
+    .c12:hover {
+      transform: rotate(20deg);
+      transform-origin: right;
+    }
+
+
+    .c13:hover {
+      transform: rotate(20deg);
+      transform-origin: left;
+    }
+
+
+    .c14:hover {
+      transform: rotate(20deg);
+      transform-origin: bottom;
+    }
+
+    .c15::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: green;
+      transform: translateX(-300px);
+      transition: all 3s;
+    }
+
+    .c15:hover::before {
+      transform: translateX(0);
+    }
+
+    .c16::before {
+      content: '';
+      position: absolute;
+      background-color: white;
+      width: 200px;
+      height: 10px;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-300px);
+      transition: all 1s;
+    }
+
+    .c16:hover::before {
+      transform: translateX(0);
+    }
+
+    .c17::before {
+      content: '';
+      position: absolute;
+      background-color: white;
+      width: 200px;
+      height: 10px;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-300px);
+      transition: all 1s;
+    }
+
+    .c17::after {
+      content: '';
+      position: absolute;
+      background-color: white;
+      width: 200px;
+      height: 10px;
+      left: 0;
+      top: 0;
+      transform: translateX(-300px);
+      transition: all 1s;
+    }
+
+    .c17:hover::before, .c17:hover::after {
+      transform: translateX(0);
+    }
+
+    .c18::before {
+      content: '';
+      position: absolute;
+      background-color: white;
+      width: 200px;
+      height: 10px;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-300px);
+      transition: all 1s;
+  }
+
+  .c18:hover::before {
+    transform: translateX(0);
+  }
+
+  .c18::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 10px;
+    right: 0;
+    top: 0;
+    transform: translateX(300px);
+    transition: all 1s;
+  }
+
+  .c18:hover::after {
+      transform: translateX(0);
+  }
+
+  .c19::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all .5s;
+    transform: rotateX(90deg);
+  }
+
+  .c19:hover::before {
+      transform: rotateX(0);
+  }
+
+  .c19::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all .5s;
+    transform: rotateY(90deg);
+  }
+  
+  .c19:hover::after {
+      transform: rotateY(0);
+  }
+
+  .c20::before{
+      content: 'hello';
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-100%);
+      transition: all .5s;
+      color: white;
+      background-color: tomato;
+      text-align: center;
+  }
+
+  .c20:hover::before {
+    transform: translateY(0);
+  }
+  </style>
+</head>
+<body>
+  <div class="c1">ease</div>
+  <div class="c2">linear</div>
+  <div class="c3">b-color</div>
+  <div class="c4">color</div>
+  <div class="c5">scale</div>
+  <div class="c6">size</div>
+  <div class="c7">letter-spacing</div>
+  <div class="c8">opacity</div>
+  <div class="c9">border</div>
+  <div class="c10">rotate</div>
+  <div class="c11">rotate top</div>
+  <div class="c12">rotate right</div>
+  <div class="c13">rotate left</div>
+  <div class="c14">rotate bottom</div>
+  <div class="c15">::before</div>
+  <div class="c16">top line</div>
+  <div class="c17">two line</div>
+  <div class="c18">two line</div>
+  <div class="c19">curtain</div>
+  <div class="c20">up</div>
+</body>
+</html>
