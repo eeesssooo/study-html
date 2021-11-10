@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* default */
+/* block 속성 적용이유 : 인라인 요소는 크기를 가질 수 없기 때문 */
+body {
+  display: flex;
+  gap: 10px;
+}
+
+.btnHam {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100px;
+  padding: 20px;
+  border: 1px solid blueviolet;
+}
+
+.btnHam span {
+  /* 공통 */
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: cornflowerblue;
+}
+
+.btnHam .a {
+  margin-bottom: 30px;
+}
+
+.btnHam .b {
+  margin-bottom: 30px;
+}
+
+.moving_soft {
+  transition: all 1s;
+}
+
+/* quiz1 */
+
+.quiz1:hover .b {
+  width: 50%;
+}
+
+/* quiz2 */
+.quiz2:hover .b {
+  width: 50%;
+}
+
+.quiz2:hover .c {
+  width: 30%;
+}
+
+
+/* quiz3 */
+/* 임의로 translateY 값을 지정하였는데, 이렇게 말고 자동으로 가운데를 맞출 수 있는 방법*/
+.quiz3:hover .a {
+  transform: translateY(35px) rotate(-45deg);
+}
+
+.quiz3:hover .b {
+  width: 0;
+}
+
+.quiz3:hover .c {
+  transform: translateY(-35px) rotate(45deg);
+}
+
+
