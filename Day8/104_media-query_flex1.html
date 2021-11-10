@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: tomato
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      box-sizing: border-box;
+      border: 10px solid darkblue;
+      height: 500px;
+      width: 100%;
+      background-color: cornflowerblue;
+    }
+
+    .item {
+      width: 500px;
+      margin: 50px;
+      color: sienna;
+      background-color: blanchedalmond;
+    }
+
+    @media screen and (max-width: 1000px) {
+      body {
+        background-color: blue
+      } 
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        background-color: violet
+      } 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem magnam, voluptates laudantium cum consequatur cumque fugiat maiores ducimus dolorem at iste, labore ullam quia ea, eos excepturi repellendus magni facere!</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis sunt commodi nihil aut omnis fuga iste tempora ipsa nisi ea, officia debitis id a nemo atque! Nihil expedita eius fugiat.</div>
+  </div>
+</body>
+</html>
