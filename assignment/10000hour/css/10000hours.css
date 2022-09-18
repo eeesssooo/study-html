@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+
+/* setting */
+/* animaion */
+/* reset */
+
+html {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* util */
+
+input {
+  margin: 0 17px;
+  padding: 16px 40px;
+  border-radius: 7px;
+  border: none;
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: all .3s;
+  transform: scale(1.01);
+}
+
+.button-yellow {
+  background: #FCEE21;
+  color: #5B2386;
+  padding: 21px 49px;
+  border-radius: 56px;
+  border: none;
+}
+
+.button-white {
+  background-color: #FFFFFF;
+  color: #5B2386;
+  padding: 21px 49px;
+  border-radius: 56px;
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* pc - layout */
+.container {
+  display: flex;
+  /* height: 100vh; */
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  width: 265px;
+  margin: 200px auto 85px;
+}
+
+h1::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: inline-block;
+  width: 225px;
+  height: 225px;
+  background-image: url(./../img/clock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 .title-img {
+  width: 100%;
+}
+
+.contents {
+  margin-bottom: 130px;
+}
+
+.hand_writing {
+  width: 100%;
+  margin-bottom: 78px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.ten_thousand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 147px;
+  text-align: center;
+}
+
+.quotation {
+  line-height: 24px;
+  margin-bottom: 102px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .input-job {
+  margin-bottom: 27px;
+}
+
+.time-check {
+  margin-top: 130px;
+}
+
+.input-group::after {
+  content: '';
+  display: inline-block;
+  width: 64px;
+  height: 72px;
+  background-image: url(./../img/click.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+}
+
+.rules-quotes p{
+  line-height: 70px;
+}
+
+.train {
+  text-align: center;
+}
+
+.train .training-date {
+  margin-bottom: 127px;
+}
+
+/* footer */
+.footer {
+  margin-bottom: 120px;
+}
+
+.footer img {
+  display: block;
+  width: 125px;
+  height: 25px; 
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.footer .foot-info {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* design */
+
+/* color */
+.primary {
+  background: #5B2386;
+}
+
+.secondary {
+  background: #FCEE21;
+}
+
+.white {
+  background: #FFFFFF;
+}
+
+.font-gold {
+  color: #F5DF4D;
+}
+
+.font-tvn {
+  font-family: 'OTEnjoystoriesBA';
+}
+
+.font-gmarket-bold {
+  font-family: 'GmarketSansBold';
+}
+
+.font-gmarket-medium {
+  font-family: 'GmarketSansMedium';
+}
+
+.font-notoSans {
+  font-family: 'Noto Sans KR';
+}
+
+.font-20 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.font-24 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.font-72 {
+  font-size: 72px;
+  line-height: 100px;
+}
+
+/* media query */
+
+@media screen and (max-width: 576px) {
+  .time-check {
+    width: 241px;
+    margin-top: 130px;
+  }
+  
+  .input-group::after {
+    content: '';
+    display: inline-block;
+    width: 64px;
+    height: 72px;
+    background-image: url(./../img/click.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+  }
+  
+}

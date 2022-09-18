@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css design</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+     /* OOCSS  */
+    /* .btn {
+      width: 200px;
+      height: 80px;
+      font-size: 30px;
+    }
+
+    .btn-closed {
+      background-color: #fff;
+      color: #fff;
+      border: 3px dotted #000;
+    } */
+
+    /* OOCSS  */
+    /* 구조와 스킨의 분리 */
+    /* main .btn {
+      width: 300px;
+      padding: 20px 10px;
+      margin: 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    main .general {
+      background-color: aquamarine;
+      color: black;
+    }
+
+    main .warning {
+      background-color: azure;
+      color: blue;
+    } */
+
+    /* SMACSS */
+    /* style.css 에서 나눠도되고 파일 따로 만들어도 됨 */
+    /* base */
+    /* layout */
+    /* 큰 레이아웃을 id 지정하여 스타일링 */
+    /* module */ 
+    /* 레이아웃안에 배치되는 모든 요소를 의미합니다. 
+    반복되는 요소들이기 때문에 ID 선택자를 사용하지 않으며, 
+    요소 선택자의 사용을 최소화합니다.(자식 요소에만 적용)
+    비슷한 모듈안에서도 모양이 조금씩 다를 경우 서브클래스를 만듭니다. (btn-small, btn-long 등등)
+    */
+    /* state */
+    /* theme */
+
+    /* #main .btn {
+      width: 300px;
+      padding: 20px 10px;
+      margin: 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    #main .general {
+      background-color: aquamarine;
+      color: black;
+    }
+
+    #main .warning {
+      background-color: azure;
+      color: blue;
+    } */
+
+    /* SMACSS : module-sub class */
+    /* .btn {
+      display: inline-block;
+      width: 300px;
+      padding: 20px 10px;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      background-color: brown;
+    }
+
+    .btn.btn-small {
+      width: 80px;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .btn.btn-long {
+      width: 180px;
+    }  */
+
+    /*  SMACSS : state */
+
+    .tabnav {
+      display: flex;
+    }
+
+    .tabnav li {
+      list-style: none;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    .tabnav li:first-child {
+      border-left: 1px solid black;
+    }
+
+    .tabnav li a {
+      display: block;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    .is-active {
+      background-color: blanchedalmond;
+    }
+
+    .is-active a {
+      pointer-events: none;
+      color: red;
+      text-decoration: none;
+    }
+
+    /* theme */
+
+    /* module */
+    /* .mod {
+      border: 1px solid;
+    } */
+     /* theme */
+    /* .mod {
+      border-color: blue;
+    } */
+
+    /*  BEM */
+    /* 의미를 중시하는 클래스명 사용 */
+    /* 
+      class -> green-box (x)
+            -> error-red (o)
+    */
+  </style>
+</head>
+<body>
+  <!-- OOCSS -->
+  <!-- <button type="button" class="btn"></button>
+  <button type="button" class="btn btn-closed"></button> -->
+  <!-- OOCSS 구조와 스킨의 분리 적용 -->
+  <!-- <main>
+    <button type="button" class="btn general">basic</button>
+    <button type="button" class="btn warning">cancel</button>
+  </main> -->
+
+  <!-- SMACSS -->
+  <!-- <main id="main">
+    <button type="button" class="btn general">basic</button>
+    <button type="button" class="btn warning">cancel</button>
+  </main>
+  <footer id="footer"></footer> -->
+
+  <!-- SMACSS : module -->
+  <!-- <a href="" class="btn btn-small btn-long">아이디 비밀번호 찾기</a>
+  <a href="" class="btn btn-small">로그인</a> -->
+
+    <!-- SMACSS : state  -->
+    <!-- <ul class="tabnav">
+      <li class="is-active"><a href="">tab1</a></li>
+      <li><a href="">tab2</a></li>
+      <li><a href="">tab3</a></li>
+      <li><a href="">tab4</a></li>
+    </ul> -->
+
+    <!-- BEM -->
+    <!-- <ul class="tabnav">
+      <li class="tabnav__item"><a href="" class="tabnav__link">tab1</a></li>
+      <li><a href="">tab2</a></li>
+      <li><a href="">tab3</a></li>
+      <li><a href="">tab4</a></li>
+    </ul> -->
+
+    <section class="chapter-baseball">
+      <button type="button" class="chapter-baseball_btn chapter-baseball_btn_active-false"></button>
+    </section>
+</body>
+</html>
